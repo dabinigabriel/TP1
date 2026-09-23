@@ -5,14 +5,33 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abel&family=Press+Start+2P&display=swap" rel="stylesheet">
-        <title>Preguntas</title>
+        <title>Quiz</title>
     </head>
     <body>
-         <header class="header">
+        <header class="header">
             <img src="img/logo.jpg" alt="logo Nintendo" height="50">
+              <nav>
+         <ul>
+            <li><a href="index.html">Menú</a></li>
+            <li><a href="puntajes.html">Puntajes</a></li>
+            <li><a href="juegos.html">Juegos</a></li>
+         </ul>
+            </nav>
         </header>
+        <main>
+            <h1 class="titulos">Quiz</h1>
+
+            <p class="texto" id="pregunta"></p>
+
+            <div id="opciones"></div>
+
+            <p id="resultado" class="texto"></p>
+
+            	<button id="nueva" type="button" hidden>Nueva pregunta</button>
+        </main>
         <footer class="fin">
-            <p>UNA-Artes Multimediales 2026</p>
+            <p class="texto">UNA-Artes Multimediales 2026</p>
+            <p class="texto">Gabriel Dabini, Celeste Werenicz, Carolina Flores Delgado</p>
         </footer>
     </body>
 </html>
