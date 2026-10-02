@@ -120,19 +120,47 @@ main { max-width: 900px;
     box-shadow: 0 2px 0 #800000; 
 }
 .seccion-juegos { 
-    background-color: rgba(2, 136, 209, 0.92); 
+    background-color: rgba(137, 196, 26, 0.92); 
     border: 4px solid #000000; border-radius: 1rem; 
     padding: 2rem 1.5rem; 
     color: #ffffff; 
     text-align: center; 
     box-shadow: 0 6px 0 #000000; 
+    margin-bottom: 2rem;
 }
 
-.seccion-juegos h2 { 
+.seccion-juegos h1 { 
     font-size: 1.2rem; 
     color: #ffca28; 
     margin-bottom: 0.8rem; 
     text-shadow: 2px 2px 0 #000000; 
+}
+.tarjeta-juego { 
+    flex: 1 1 260px;  
+    background-color: #a41212; 
+    color: #111111; 
+    border: 4px solid #000000; 
+    border-radius: 0.8rem; 
+    padding: 1.5rem 1rem; 
+    display: flex; 
+flex-direction: column;
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0 6px 0 #000000; 
+}
+
+.tarjeta-juego h2 { 
+    font-size: 0.85rem; 
+    color: #ce680f;  
+    margin-bottom: 0.5rem; 
+   
+}
+.tarjeta-juego p { 
+    font-size: 0.80rem; 
+    line-height: 1.4; 
+    text-align: center;
+    color: #000000; 
+   
 }
 .contenedor-juegos { 
     display: flex; 
@@ -143,7 +171,8 @@ main { max-width: 900px;
     width: 70px; 
     height: 70px; 
     object-fit: contain; 
-    margin-bottom: 1rem; 
+    margin-left: 1rem; 
+    border-radius: 50%;  
 }
 
 .pantalla-puntajes { 
@@ -205,7 +234,7 @@ footer p {
 }
 
 #integrantes { 
-    background-color: rgba(2, 136, 209, 0.92); 
+    background-color: rgba(176, 95, 25, 0.92); 
     border: 4px solid #000000; border-radius: 1rem;
     padding: 2.5rem 1.5rem; color: #ffffff; 
     text-align: center; box-shadow: 0 6px 0 #000000; 
@@ -250,4 +279,5 @@ footer p {
     line-height: 1.6; 
     color: #333333; 
     margin-bottom: 1.5rem; 
-    max-width: 600px; }
+    max-width: 600px; 
+}
