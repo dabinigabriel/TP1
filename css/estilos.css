@@ -25,6 +25,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    background-color: #5c94fc;
     color: #111111; line-height: 1.5; 
     display: flex; 
     flex-direction: column; 
@@ -71,6 +72,53 @@ body {
     color: #000000; 
 }
 
+main { max-width: 900px; 
+    width: 90%; 
+    margin: 2rem auto; 
+    flex: 1; 
+}
+
+#bienvenida {
+    background-color: #8d5206;
+    border: 4px solid #000000; 
+    border-radius: 1rem; 
+    padding: 2rem; 
+    color: #ffffff; 
+    text-align: center; 
+    box-shadow: 0 6px 0 #000000; 
+}
+
+#bienvenida h1 { 
+    font-size: 1.2rem; 
+    color: #ffca28;
+    margin-bottom: 1.5rem; 
+    text-shadow: 2px 2px 0 #000000; 
+}
+#bienvenida p { 
+    font-size: 0.75rem; 
+    margin-bottom: 1.2rem; 
+    text-shadow: 1px 1px 0 #000000; 
+}
+
+.boton-jugar { 
+    display: inline-block; 
+    background-color: #e60012; 
+    color: #ffffff; 
+    padding: 1rem 1.5rem; 
+    border: 3px solid #000000; 
+    border-radius: 8px; 
+    font-size: 0.8rem; 
+    text-decoration: none; 
+    margin-top: 1rem; 
+    box-shadow: 0 4px 0 #800000; 
+}
+.boton-jugar:hover { 
+    background-color: #ff2233; 
+}
+.boton-jugar:active { 
+    
+    box-shadow: 0 2px 0 #800000; 
+}
 /*footer*/
 
 footer {
