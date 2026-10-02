@@ -3,12 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body { 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh;
+}
 /*imagenes de fondo*/
 
 #pagina-index {
     background-image: url("../img/fondo-gameplay.png");
    background-repeat: no-repeat;
-  background-attachment: fixed;
+ background-attachment: scroll;
   background-position: center;
   background-size: cover;
 }
@@ -16,7 +22,7 @@
 #pagina-juegos {
     background-image: url("../img/fondo-index.png");
    background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
    background-size: cover;
 }
@@ -24,7 +30,7 @@
 #pagina-puntajes {
     background-image: url("../img/fondo-index.png");
    background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
    background-size: cover;
 }
@@ -32,7 +38,7 @@
 #pagina-integrantes {
     background-image: url("../img/fondo-index.png");
    background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
    background-size: cover;
 }
@@ -40,14 +46,14 @@
 #pagina-generala {
     background-image: url("../img/fondo-generala.png");
    background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
    background-size: cover;
 }
 #pagina-cartas {
     background-image: url("../img/fondo-memo.jpg");
    background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
    background-size: cover;
 }
@@ -55,11 +61,13 @@
 #pagina-preguntas {
     background-image: url("../img/fondo-quiz.png");
    background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
    background-size: cover;
 }
-
+.texto {
+    font-family: "Press Start 2P", system-ui;
+}
 /*header y nav*/
 
 header {
@@ -73,19 +81,6 @@ header {
     padding: 1rem 3%;
     
     background-color: #e60012;
-}
-body { 
-    font-family: 'Press Start 2P', system-ui, sans-serif; 
-    background-image: url('../img/fondo-gameplay.png'); 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-color: #5c94fc;
-    color: #111111; line-height: 1.5; 
-    display: flex; 
-    flex-direction: column; 
-    min-height: 100vh;
 }
 
 .logo {
@@ -135,27 +130,19 @@ main { max-width: 900px;
 }
 
 #bienvenida {
-    background-color: #70450d;
-    border: 4px solid #000000; 
+    background-color: #fffffebd;
+    border: 4px solid #838282; 
     border-radius: 1rem; 
     padding: 2rem; 
-    color: #ffffff; 
+    color: #000000; 
     text-align: center; 
-    box-shadow: 0 6px 0 #000000; 
+    box-shadow: 0 6px 0 #0000004d; 
 }
 
 #bienvenida h1 { 
-    font-size: 1.2rem; 
     color: #ffca28;
-    margin-bottom: 1.5rem; 
     text-shadow: 2px 2px 0 #000000; 
 }
-#bienvenida p { 
-    font-size: 0.75rem; 
-    margin-bottom: 1.2rem; 
-    text-shadow: 1px 1px 0 #000000; 
-}
-
 .boton-jugar { 
     display: inline-block; 
     background-color: #e60012; 
@@ -167,6 +154,7 @@ main { max-width: 900px;
     text-decoration: none; 
     margin-top: 1rem; 
     box-shadow: 0 4px 0 #800000; 
+     font-family: "Press Start 2P", system-ui;
 }
 .boton-jugar:hover { 
     background-color: #ff2233; 
@@ -175,48 +163,58 @@ main { max-width: 900px;
     
     box-shadow: 0 2px 0 #800000; 
 }
-.seccion-juegos { 
-    background-color: rgba(137, 196, 26, 0.92); 
-    border: 4px solid #000000; border-radius: 1rem; 
-    padding: 2rem 1.5rem; 
+.boton-generala {
+display: inline-block; 
+    background-color: #e60012; 
     color: #ffffff; 
+    padding: 1rem 1.5rem; 
+    border: 3px solid #000000; 
+    border-radius: 8px; 
+    font-size: 0.8rem; 
+    text-decoration: none; 
+    margin-top: 1rem; 
+    box-shadow: 0 4px 0 #800000; 
+     font-family: "Press Start 2P", system-ui;
+}
+.boton-generala:hover {
+     background-color: #ff2233; 
+}
+
+.seccion-juegos { 
+    background-color: rgb(112, 205, 248); 
+    border: 4px solid #003494; border-radius: 1rem; 
+    padding: 2rem 1.5rem; 
     text-align: center; 
     box-shadow: 0 6px 0 #000000; 
     margin-bottom: 2rem;
 }
 
 .seccion-juegos h1 { 
-    font-size: 1.2rem; 
     color: #ffca28; 
     margin-bottom: 0.8rem; 
     text-shadow: 2px 2px 0 #000000; 
 }
 .tarjeta-juego { 
     flex: 1 1 260px;  
-    background-color: #a41212; 
-    color: #111111; 
-    border: 4px solid #000000; 
+    background-color: #ffe600; 
+    border: 4px solid #be6600; 
     border-radius: 0.8rem; 
     padding: 1.5rem 1rem; 
     display: flex; 
 flex-direction: column;
     justify-content: space-between; 
     align-items: center; 
-    box-shadow: 0 6px 0 #000000; 
+     box-shadow: 0 6px 0 #be6600;  
 }
 
-.tarjeta-juego h2 { 
-    font-size: 0.85rem; 
-    color: #ce680f;  
+.tarjeta-juego h3 {  
     margin-bottom: 0.5rem; 
    
 }
 .tarjeta-juego p { 
-    font-size: 0.80rem; 
-    line-height: 1.4; 
     text-align: center;
     color: #000000; 
-   
+    font-size: 0.8rem ;
 }
 .contenedor-juegos { 
     display: flex; 
@@ -226,28 +224,25 @@ flex-direction: column;
 .imagen-juego { 
     width: 70px; 
     height: 70px; 
-    object-fit: contain; 
+    object-fit: cover; 
     margin-left: 1rem; 
     border-radius: 50%;  
 }
 
 .pantalla-puntajes { 
-    background-color: rgba(16, 152, 32, 0.92); 
-    border: 4px solid #000000; border-radius: 1rem; 
+    background-color: rgb(112, 205, 248); 
+    border: 4px solid #003494; border-radius: 1rem; 
     padding: 2.5rem 1.5rem; 
-    color: #ffffff; 
     text-align: center; 
     box-shadow: 0 6px 0 #000000; 
 }
 .pantalla-puntajes h1 { 
-    font-size: 1.2rem; 
     color: #ffca28; 
     margin-bottom: 0.8rem; 
     text-shadow: 2px 2px 0 #000000; 
 }
 .contenedor-puntajes { 
     background-color: #ffffff; 
-    color: #111111; 
     border: 4px solid #000000; 
     border-radius: 8px; 
     overflow: hidden; 
@@ -272,18 +267,16 @@ flex-direction: column;
 /*footer*/
 
 footer {
-  width: 100%;
+    width: 100%;
     height: auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-     position: absolute;
-  bottom: 0;
 
     padding: 20px;
-    
-    background-color: #e60012;   
+
+    background-color: #e60012;
 }
 
 footer p {
@@ -291,23 +284,18 @@ footer p {
     color: white;
 }
 
-<<<<<<< Updated upstream
 #integrantes { 
-    background-color: rgba(176, 95, 25, 0.92); 
-    border: 4px solid #000000; border-radius: 1rem;
-    padding: 2.5rem 1.5rem; color: #ffffff; 
+     background-color: rgb(112, 205, 248); 
+    border: 4px solid #003494; border-radius: 1rem; 
+    padding: 2.5rem 1.5rem; 
     text-align: center; box-shadow: 0 6px 0 #000000; 
 }
-
-#integrantes h2 { 
-    font-size: 1.2rem; 
-    color: #ffca28; 
-    margin-bottom: 1.5rem; 
-    text-shadow: 2px 2px 0 #000000; 
-}
+ #integrantes h1 {
+    margin-bottom: 2rem;
+ }
 
 .integrante { 
-    background-color: #ddcdcd; 
+    background-color: white;
     color: #111111; 
     border: 4px solid #000000; 
     border-radius: 0.8rem; 
@@ -322,7 +310,7 @@ footer p {
     width: 100px; 
     height: 100px; 
     border-radius: 50%;  
-    border: 3px solid #1a1162; 
+    border: 3px solid black;
     object-fit: cover;  
     margin-bottom: 1rem; 
 }
@@ -333,44 +321,53 @@ footer p {
     margin-bottom: 0.5rem; 
 }
 
-.descripcion-integrante { 
-    font-size: 0.65rem; 
-    line-height: 1.6; 
-    color: #333333; 
-    margin-bottom: 1.5rem; 
-    max-width: 600px; 
-=======
-/*textos*/
 
-.titulos {
-    font-family: "Press Start 2P", system-ui;
-    color: black;
-}
-.texto {
-    font-family: "Press Start 2P", system-ui;
-    color: black;
-}
+    /*generala*/
 
-/*main index*/
-
-#main-index {
-    height: 80vh;
-
+    /* DADOS */
+#dados {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 10px;
+    margin: 1.5rem 0;
 }
 
+/* BOTÓN TIRAR */
+#tirar {
+    margin-bottom: 1.5rem;
+}
 
-#bienvenida {
-    background-color: rgba(255, 255, 255, 0.8); 
-    width: 500px;
-    height: auto;
-    padding: 45px;
-    /*borde*/
-    border-width: 6px;
-    border-color: rgb(141, 141, 141);
-    border-radius: 10%;
-    border-style: solid;
->>>>>>> Stashed changes
+/* TEXTO DE TIRADAS */
+#tiradas {
+    margin-bottom: 2rem;
+    color: white;
+}
+
+/* TÍTULO CATEGORÍAS */
+#categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1rem;
+    color: white;
+}
+
+/* BOTONES DE CATEGORÍAS */
+.boton-generala {
+    margin-top: 0;
+}
+
+.texto-juegos {
+    color: white;
+     font-family: "Press Start 2P", system-ui;
+}
+
+#desarrollo {
+    background-color: white;
+    border: 4px solid #000000; 
+    border-radius: 0.8rem; 
+    padding: 2rem 1.5rem; 
+    box-shadow: 0 6px 0 #000000; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
 }
