@@ -166,20 +166,25 @@ function calcularPuntaje(categoria) {
 
     }
 
-    //sumar puntaje
+   // sumar puntaje
 
+puntaje = puntaje + puntos;
 
-    puntaje = puntaje + puntos;
+textoPuntaje.textContent = puntaje;
 
-    textoPuntaje.textContent = puntaje;
+// desactivar
 
-//desactivar
+botonesCategorias[categoria].disabled = true;
 
-    botonesCategorias[categoria].disabled = true;
+// guardar cuando termina la partida
 
-    //nueva ronda
+if (categoria == 9) {
+    guardarPuntaje();
+}
 
-      nuevaRonda();
+// nueva ronda
+
+nuevaRonda();
 
 }
 
@@ -438,4 +443,20 @@ function nuevaRonda() {
 
     }
 
+}
+
+
+function guardarPuntaje() {
+
+    let lista = JSON.parse(localStorage.getItem("tablaPuntajes")) || [];
+
+    lista.push({
+        jugador: "JUGADOR 1",
+        minijuego: "GENERALA",
+        puntaje: puntaje + " PTS"
+    });
+
+    localStorage.setItem("tablaPuntajes", JSON.stringify(lista));
+
+    alert("¡PARTIDA TERMINADA!\nPuntaje total: " + puntaje + " PTS");
 }
