@@ -355,7 +355,53 @@ footer p {
 .boton-generala {
     margin-top: 0;
 }
+/* SECCIÓN DE PUNTAJES */
 
+#seccion-puntajes {
+    background-color: white;
+    border: 4px solid #000000;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 6px 0 #000000;
+    color: #000000;
+    font-family: "Press Start 2P", system-ui;
+}
+
+#seccion-puntajes h2 {
+    color: #e60012;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.fila-puntaje {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.7rem;
+
+    border-bottom: 2px solid #000000;
+}
+
+.fila-puntaje:last-child {
+    border-bottom: none;
+}
+
+.fila-puntaje span {
+    font-size: 0.7rem;
+}
+
+.fila-puntaje span:last-child {
+    color: #e60012;
+}
+
+.boton-generala:disabled {
+    background-color: #777777;
+    color: #cccccc;
+    box-shadow: 0 2px 0 #444444;
+    cursor: not-allowed;
+}
 .texto-juegos {
     color: white;
      font-family: "Press Start 2P", system-ui;
