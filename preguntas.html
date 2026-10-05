@@ -8,7 +8,7 @@
 <link href="css/estilos.css" rel="stylesheet">
         <title>Quiz</title>
     </head>
-    <body id="pagina-preguntas">
+    <body id="pagina-preguntas" class="texto">
              <header class="header">
             <img class="logo" src="img/logo.jpg" alt="logo Nintendo">
             <nav class="navegador">
@@ -24,19 +24,41 @@
             </nav>
         </header>
         <main>
-            <h1 class="texto">Quiz</h1>
+           <section class="pantalla-quiz">
+            <h1>Trivia Videojuegos</h1>
+            <p class="subtitulo-quiz">Preguntas dinámicas obtenidas en tiempo real desde Open Trivia API:</p>
 
-            <p class="texto" id="pregunta"></p>
+            <!-- Panel con indicadores de avance y puntaje -->
+            <div class="panel-control-quiz">
+                <div class="caja-indicador">
+                    Pregunta: <span id="num-pregunta">0/12</span>
+                </div>
+                <div class="caja-indicador">
+                    Puntaje: <span id="puntaje-quiz">0</span> PTS
+                </div>
+            </div>
 
-            <div id="opciones"></div>
+            <!-- Botón inicial para consultar la API -->
+            <button id="btn-iniciar-quiz" class="boton-jugar">CARGAR TRIVIA</button>
 
-            <p id="resultado" class="texto"></p>
-
-            	<button id="nueva" type="button" hidden>Nueva pregunta</button>
+            <!-- Indicador de carga -->
+            <div id="mensaje-cargando" class="mensaje-cargando" style="display: none;">
+                CARGANDO PREGUNTAS DESDE LA API...
+            </div>
+ <!-- Caja donde se muestra la pregunta y sus 4 opciones de respuesta -->
+            <div id="contenedor-pregunta" class="contenedor-pregunta" style="display: none;">
+                
+            <div id="opciones-respuestas" class="opciones-respuestas">
+                    
+</div>
+ </div>
+</section>
         </main>
+
        <footer class="fin">
             <p>UNA-Artes Multimediales 2026</p>
             <p>Gabriel Dabini, Carolina Flores Delgado</p>
         </footer>
+        <script src="js/preguntas.js"></script>
     </body>
 </html>
