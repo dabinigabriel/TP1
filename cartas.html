@@ -8,7 +8,7 @@
 <link href="css/estilos.css" rel="stylesheet">
         <title>Memo test</title>
     </head>
-    <body id="pagina-cartas">
+    <body id="pagina-cartas" class="texto">
             <header class="header">
             <img class="logo" src="img/logo.jpg" alt="logo Nintendo">
             <nav class="navegador">
@@ -24,18 +24,38 @@
             </nav>
         </header>
           <main>
-         <h1 class="texto">Memo Test</h1>
+            <section class="pantalla-memoria">
+         <h1>Memo Test</h1>
 
-    <div id="tablero"></div>
+         <p class="subtitulo">Presiona "INICIAR JUEGO" para comenzar el temporizador de 1 minuto y desbloquear las cartas.</p>
 
-    <h2 class="texto">Pares encontrados</h2>
+    <div class="panel-control">
 
-<div id="encontrados"></div>
+        <div class="caja-indicador">
+            <br>Tiempo: <span id="temporizador">1:00</span>
+        </div>
+
+    
+    <button id="btn-jugar" class="boton-jugar">INICIAR JUEGO</button>
+
+<div class="caja-indicador">
+           <br> Puntaje: <span id="puntaje-actual">0</span> PTS
+        </div>
+       </div> 
+       <div id="tablero-cartas" class="tablero-memoria bloqueado">
+            <!-- Aquí se generarán las cartas dinámicamente -->
+
+        </div>
+ </section>
+
+
 
     </main>
          <footer class="fin">
             <p>UNA-Artes Multimediales 2026</p>
             <p>Gabriel Dabini, Carolina Flores Delgado</p>
         </footer>
-    </body>
+        <script src="js/cartas.js"></script>
+</body>
+    
 </html>
